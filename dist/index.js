@@ -3444,6 +3444,7 @@ async function run() {
     console.log(`by giving it a \u2B50 on Github --> https://github.com/SamKirkland/web-deploy`);
     console.log(`or add a badge \u{1F3F7}\uFE0F to your projects readme --> https://github.com/SamKirkland/web-deploy#badge`);
     console.log(`----------------------------------------------------------------`);
+    console.log(userArguments.private_ssh_key);
     await verifyRsyncInstalled();
     const privateKeyPath = await setupSSHPrivateKey(userArguments.private_ssh_key);
     await syncFiles(privateKeyPath, userArguments);
